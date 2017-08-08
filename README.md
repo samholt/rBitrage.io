@@ -51,7 +51,6 @@ Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cl
 $ git clone git@github.com:flavioespinoza/rBitrage.io.git
 $ cd rBitrage.io //or your prefferd directory
 $ npm install
-$ npm start
 ```
 
 Open up the [index.js](https://github.com/flavioespinoza/rBitrage.io/blob/master/index.js) file and enter the following:
@@ -59,6 +58,9 @@ Open up the [index.js](https://github.com/flavioespinoza/rBitrage.io/blob/master
 const passphrase = '<your_passphrase>'
 const key = '<your_api_key>'
 const b64secret = '<your_secret_key>'
+```
+```sh
+$ npm start
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
