@@ -29,8 +29,7 @@ function toFixed(_number, _scale) {
   return n.toFixed(_scale)
 }
 
-// Database connection URL
-var url = '<your_mongo_db_secure_url>'
+/** Data object used for monitoring sent to client for viewing */
 var data = {
   btc: {
     orderbook: {
@@ -60,11 +59,19 @@ var ___current_eth_ask___
 var ETH = new Gdax.PublicClient('ETH-USD')
 var XCH = new Gdax.PublicClient('ETH-BTC')
 var BTC = new Gdax.PublicClient('BTC-USD')
+
+/** REQUIRED */
+/** Secure authorized client requirements set up on https://www.gdax.com/settings/api */
 const passphrase = '<your_passphrase>'
 const key = '<your_api_key>'
 const b64secret = '<your_secret_key>'
 const apiURI = 'https://api.gdax.com'
+
+/** Secure MongoDB url - Optional */
+const MongoDB_URL = '<your_mongo_db_secure_url>'
+
 const authedClient = new Gdax.AuthenticatedClient(key, b64secret, passphrase, apiURI)
+
 var __buyExecuted__ETH_USD = false
 var __orderSettled__ETH_USD = false
 var __tradeExecuted__ETH_BTC = false
@@ -428,7 +435,7 @@ function __go_rBitrage(__stop) {
   }, 1000)
 }
 
-/** DB Functions */
+/** MongoDB Functions - Optional */
 function sendToMongo(__data, __collection) {
   /** Send to Mongo DB */
   var insertDocument = function (db, __obj, callback) {
@@ -442,7 +449,7 @@ function sendToMongo(__data, __collection) {
     })
 
   }
-  MongoClient.connect(url, function (err, db) {
+  MongoClient.connect(MongoDB_URL, function (err, db) {
     assert.equal(null, err)
     insertDocument(db, __data.calcs[0], function () {
       getOpportunitiesHistory()
@@ -468,7 +475,7 @@ var rbitrage_threshold = 1
 
 function getOpportunitiesHistory() {
   var __sumArray = []
-  var __sum = MongoClient.connect(url, function(err, db) {
+  var __sum = MongoClient.connect(MongoDB_URL, function(err, db) {
     assert.equal(null, err)
     db.collection(db_collection).find({}, {
       skip: 1,
