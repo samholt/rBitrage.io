@@ -11,7 +11,7 @@ A Node Express app built using the Heroku CLI for monitoring arbitrage opportuni
   - Status: Aug 8, 2017 - 90% Code completion of internal monitor and auto trader.
   - GDAX automated internal monitoring and trading of USD to ETH to BTC to USD
   - GDAX Account required through Coinbase
-  - GDAX API Key, Secret Key and Passphrase
+  - API Key, Secret Key and Passphrase setup required through GDAX
 
 # Planned Features!
   - Automated internal monitoring and trading of USD to ETH to BTC to USD on:
