@@ -34,7 +34,7 @@ rBitrage.io uses a number of open source projects to work properly:
 * [Material Design Lite](https://getmdl.io/) - Non JS reliant Material Design web components
 * [D3](https://d3js.org) - Dynamic interactive data visualizations
 * [Moment](https://momentjs.com/) - Parse, validate, and display dates and times in JavaScript
-* [Lodash](https://lodash.com/) - Utility functions for complex array and object manipulations
+* [Lodash](https://lodash.com/) - Utility functions for complex array and object tasks
 * [MongoDB](https://www.mongodb.com/) - NoSQL cross-platform document-oriented database
 
 ### Installation
