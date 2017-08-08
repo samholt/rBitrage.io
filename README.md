@@ -7,11 +7,13 @@ A Node Express app built using the Heroku CLI for monitoring arbitrage opportuni
 > It is a trade that profits by capitalizing on the price differences of identical/similar commodities
 > on the same exchange or different exchanges.
 
+# Required
+  - GDAX Account required through [Coinbase](https://www.coinbase.com)
+  - API Key, Secret Key and Passphrase set up on [GDAX](https://www.gdax.com/settings/api)
+
 # Current Status & Features!
   - Status: Aug 8, 2017 - 90% Code completion of internal monitor and auto trader.
   - GDAX automated internal monitoring and trading of USD to ETH to BTC to USD
-  - GDAX Account required through Coinbase
-  - API Key, Secret Key and Passphrase setup required through GDAX
 
 # Planned Features!
   - Automated internal monitoring and trading of USD to ETH to BTC to USD on:
@@ -34,7 +36,7 @@ rBitrage.io uses a number of open source projects to work properly:
 * [Material Design Lite](https://getmdl.io/) - Non JS reliant Material Design web components
 * [D3](https://d3js.org) - Dynamic interactive data visualizations
 * [Moment](https://momentjs.com/) - Parse, validate, and display dates and times in JavaScript
-* [Lodash](https://lodash.com/) - Utility functions for complex array and object tasks
+* [Lodash](https://lodash.com/) - Utility functions for complex array and object manipulations
 * [MongoDB](https://www.mongodb.com/) - NoSQL cross-platform document-oriented database
 
 ### Installation
@@ -50,6 +52,13 @@ $ git clone git@github.com:flavioespinoza/rBitrage.io.git
 $ cd rBitrage.io //or your prefferd directory
 $ npm install
 $ npm start
+```
+
+Open up the [index.js](https://github.com/flavioespinoza/rBitrage.io/blob/master/index.js) file and enter the following:
+```javascript
+const passphrase = '<your_passphrase>'
+const key = '<your_api_key>'
+const b64secret = '<your_secret_key>'
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
