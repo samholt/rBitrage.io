@@ -384,19 +384,24 @@ io.on('connection', function(socket) {
       }
       var rbitrage = data.calcs[0]
       ___current_eth_ask___ = rbitrage.eth_ask_price
-      // if (rbitrage.net_gain >= 3) {
-      if (r_count <= 3) {
-        console.log('set prices');
-        __eth_ask_price = toFixed(_.subtract(_.toNumber(rbitrage.eth_ask_price), 0.01), 2)
-        __xch_bid_price = toFixed(_.add(_.toNumber(rbitrage.xch_bid_price), 0.00001), 5)
-        __btc_bid_price = toFixed(_.add(_.toNumber(rbitrage.btc_bid_price), 2.01), 2)
-        console.log('__eth_ask_price', __eth_ask_price);
-        console.log('__xch_bid_price', __xch_bid_price);
-        console.log('__btc_bid_price', __btc_bid_price);
-        r_count++
-        __go_rBitrage(false)
+
+      if (rbitrage.net_gain >= 3) {
+        if (r_count <= 3) {
+          console.log('set prices');
+          __eth_ask_price = toFixed(_.subtract(_.toNumber(rbitrage.eth_ask_price), 0.01), 2)
+          __xch_bid_price = toFixed(_.add(_.toNumber(rbitrage.xch_bid_price), 0.00001), 5)
+          __btc_bid_price = toFixed(_.add(_.toNumber(rbitrage.btc_bid_price), 2.01), 2)
+          console.log('__eth_ask_price', __eth_ask_price);
+          console.log('__xch_bid_price', __xch_bid_price);
+          console.log('__btc_bid_price', __btc_bid_price);
+          r_count++
+
+          /** Uncomment if you want to auto trade */
+          // __go_rBitrage(false)
+
+        }
       }
-      // }
+
       /** Send data to client. */
       io.emit('get market data', data)
       count++
@@ -434,6 +439,7 @@ function __go_rBitrage(__stop) {
     }
   }, 1000)
 }
+
 
 /** MongoDB Functions - Optional */
 function sendToMongo(__data, __collection) {
@@ -514,7 +520,7 @@ function getOpportunitiesHistory() {
   })
 }
 
-getOpportunitiesHistory()
+// getOpportunitiesHistory()
 
 http.listen(port, function() {
   console.log('listening on *:' + port)
