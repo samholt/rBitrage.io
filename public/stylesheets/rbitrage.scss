@@ -1,0 +1,93 @@
+h1 {
+ color: hotpink;
+}
+
+.header-localhost {
+    background: #9a93d6;
+}
+
+.pairs {
+    width: 100%;
+    padding: 12px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.mdl-list {
+    padding: 0;
+}
+
+.mdl-list, .title-bids {
+    width: 50%;
+    position: relative;
+    float: left;
+    margin: 0;
+    text-align: center;
+}
+
+.mdl-list__item {
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.mdl-list__item:last-child {
+    border-bottom: none;
+}
+
+#gemini_asks {
+
+    .mdl-list__item .mdl-list__item-primary-content {
+        width: 50%;
+        display: inline;
+        text-align: right;
+    }
+}
+
+#kraken_bids {
+
+    .mdl-list__item .mdl-list__item-primary-content {
+        width: 50%;
+        display: inline;
+        text-align: left;
+    }
+
+}
+
+#gemini_kraken {
+    width: 100%;
+
+    .mdl-list__item .mdl-list__item-primary-content:first-child {
+        width: 10%;
+        display: inline;
+        text-align: right;
+    }
+
+    .mdl-list__item .mdl-list__item-primary-content {
+        width: 22.5%;
+        display: inline;
+        text-align: right;
+    }
+}
+
+#calcsHeader {
+    width: 100%;
+    min-height: 48px;
+    .mdl-list__item {
+        background-color: gray;
+        color: white;
+        font-weight: 500;
+    }
+    .mdl-list__item .mdl-list__item-primary-content {
+        width: 10%;
+        display: inline;
+        text-align: right;
+    }
+}
+
+#calcs {
+    width: 100%;
+    .mdl-list__item .mdl-list__item-primary-content {
+        width: 10%;
+        display: inline;
+        text-align: right;
+    }
+}

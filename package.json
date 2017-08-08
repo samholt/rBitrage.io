@@ -1,0 +1,44 @@
+{
+  "name": "rBitrage.io",
+  "version": "0.2.6",
+  "description": "An arbitrage trading bot for crypto currencies",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "autobahn": "^17.5.2",
+    "bufferutil": "3.0.2",
+    "chance": "^1.0.10",
+    "csv": "^1.1.1",
+    "ejs": "2.5.6",
+    "express": "4.15.2",
+    "gdax": "^0.4.2",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.30",
+    "request": "^2.81.0",
+    "socket.io": "^1.7.3",
+    "utf-8-validate": "3.0.3",
+    "ws": "3.1.0"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

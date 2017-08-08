@@ -1,0 +1,10 @@
+{
+  "directory": "public/bower_components",
+  "timeout": 120000,
+  "registry": {
+    "search": [
+      "http://localhost:5000",
+      "https://bower.herokuapp.com"
+    ]
+  }
+}

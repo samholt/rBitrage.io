@@ -1,0 +1,7 @@
+{
+  "name": "rBitrage.io",
+  "description": "Arbitrage trading app",
+  "repository": "https://github.com/flavioespinoza/rBitrage.io.git",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

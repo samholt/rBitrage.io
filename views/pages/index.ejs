@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/head.ejs %>
+</head>
+
+<body>
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <% include ../partials/header.ejs %>
+  <% include ../partials/nav.ejs %>
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <div class="mdl-grid p0 pr24">
+
+        <!-- GDAX -->
+        <div class="mdl-cell mdl-cell--12-col">
+          <div class="pairs">
+            <h6 class="title-bids">USD ----> ETH ----> BTC ----> USD</h6>
+            <h6 id="date_time" class="title-bids"></h6>
+
+          </div>
+          <div class="pairs pb0">
+            <div id="calcsHeader" class="mdl-card mdl-shadow--2dp">
+
+            </div>
+          </div>
+          <div class="pairs pt0">
+            <div id="calcs" class="mdl-card mdl-shadow--2dp">
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </main>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="../../index.front-end.js"></script>
+
+<script>
+
+  if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+    $('header').addClass('header-localhost')
+  }
+
+</script>
+
+
+
+
+</body>
+</html>

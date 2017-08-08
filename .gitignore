@@ -1,0 +1,14 @@
+# Node build artifacts
+node_modules
+public/bower_components
+npm-debug.log
+.idea
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml

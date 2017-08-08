@@ -1,0 +1,26 @@
+{
+  "name": "rbitrage.io",
+  "description": "Cryptocurrency arbitrage trading platform.",
+  "main": "index.js",
+  "authors": [
+    "flavioespinoza <flavio.espinoza@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bitcoin",
+    "etherium",
+    "crypto"
+  ],
+  "homepage": "rbitrage.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "edge-css": "*"
+  }
+}
